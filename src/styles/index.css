@@ -1,3 +1,97 @@
-/* 
-    General Styles
-*/
+body {
+    background: black;
+    color: white;
+  }
+
+.pagination{
+  margin: auto;
+  margin-top: 80px;
+}
+
+.navbar{
+  padding: 8px 15px 8px 15px;
+}
+#navbarButtons{
+  gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centerH1{
+text-align: center;
+margin-bottom: 50px;
+}
+#verMas{
+  width: 550px;
+
+}
+
+.card{
+  margin: auto;
+    color: black;
+    max-width: 600px;
+}
+
+.notFound{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.iconholder{
+  display: flex;
+  float: inline-end;
+}
+
+.buttonsNav{
+  font-size: large;
+  text-decoration: none;
+  color: #ffe81f;
+}
+
+.buttonsNav:hover{
+  color: white;
+}
+
+#backButton{
+  max-width: 120px;
+  margin: auto;
+  margin-bottom: 15px;
+
+}
+
+#trash{
+cursor: pointer;
+color: black;
+}
+
+#droptext{
+  color: white;
+}
+
+#foot{
+  margin-top: 60px;
+}
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #000000 #000000;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #272626;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 10px;
+    border: 2px outset #ffe81f;
+  }

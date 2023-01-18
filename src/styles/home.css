@@ -1,0 +1,14 @@
+.horizontal-container{
+display: flex;
+overflow-x: scroll;
+gap: 45px;
+padding: 15px;
+}
+
+.hometitle{
+    margin-top: 55px;
+}
+
+.horizontal-container > .card{
+min-width: 30%;
+}
