@@ -40,7 +40,7 @@ return <>
 </div>
 
 </div>
-<Pagination pages={totalPages} element="films" currentPage={searchParams.get("page")}/>
+{/* <Pagination pages={totalPages} element="films" currentPage={searchParams.get("page")}/> */}
 </>
 }
 

@@ -1,24 +1,24 @@
 import { element } from "prop-types";
-
+const apiUrl = "https://3000-4geeksacade-flaskresthe-e41tw5wytpf.ws-us85.gitpod.io"
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 favoritos: [],
 		},
 		actions: {
-			getList: async (element, page=1, limit=10) => {
-				let response = await fetch(`https://www.swapi.tech/api/${element}?page=${page}&limit=${limit}`)
+			getList: async (element) => {
+				let response = await fetch(apiUrl+`/`+element)
 				if (!response.ok) console.error(`Error en la petición: ${response.statusText}`)
 				else {
 					let data = await response.json()
 					let newStore = {}
-					newStore[element] = data.result || data.results
+					newStore[element] = data
 					newStore[element] = newStore[element].map(item => {
-						item.img = `https://starwars-visualguide.com/assets/img/${element == "people" ? "characters" : element}/${item.uid}.jpg`
+						item.img = `https://starwars-visualguide.com/assets/img/${element == "people" ? "characters" : element}/${item.id}.jpg`
 						return item
 					})
 					setStore(newStore)
-					return{pages: data.total_pages}
+					return{data}
 				}
 			},
 

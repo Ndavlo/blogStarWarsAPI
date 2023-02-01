@@ -33,12 +33,12 @@ const ShortList = ({ elementType }) => {
     return <div>
         <h1 className="hometitle">{getTitle()}</h1>
         <div className="d-flex horizontal-container">
-            {store[elementType]?.map(item => <div key={item.uid} className="card" style={{ width: "18rem" }}>
+            {store[elementType]?.map(item => <div key={item.id} className="card" style={{ width: "18rem" }}>
                 <img src={item.img} className="card-img-top" onError={errorImage} alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title">{item.name|| item.properties.title }</h5>
-                    <Link to={`/${elementType}/${item.uid}`} className="btn btn-outline-dark">Leer mas</Link>
-                    <button onClick={() => actions.favoritos(item.name || item.properties.title)} className="btn btn-outline-light d-md-flex justify-content-end"><i className="fa fa-heart text-danger" /></button>
+                    <h5 className="card-title">{item.name|| item.title }</h5>
+                    <Link to={`/${elementType}/${item.id}`} className="btn btn-outline-dark">Leer mas</Link>
+                    <button onClick={() => actions.favoritos(item.name || item.title)} className="btn btn-outline-light d-md-flex justify-content-end"><i className="fa fa-heart text-danger" /></button>
                 </div>
             </div>)}
                 <div key={-1} className="card bg-transparent">
